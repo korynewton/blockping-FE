@@ -1,11 +1,15 @@
 import React from 'react';
 import sounds from './../../sounds/sounds';
-import Button from '../Button/Button.component';
+import ButtonComponent from '../Button/Button.component';
 
-const Buttons = ({ selectAudio }) => {
-  return Object.keys(sounds).map(name => (
-    <Button key={name} name={name} selectAudio={selectAudio} />
-  ));
-};
+import './buttons.styles.scss';
+
+const Buttons = ({ selectAudio }) => (
+  <div className="button-container">
+    {Object.keys(sounds).map(name => (
+      <ButtonComponent key={name} name={name} selectAudio={selectAudio} />
+    ))}
+  </div>
+);
 
 export default Buttons;

@@ -1,7 +1,16 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
 
-const Button = ({ name, selectAudio }) => {
-  return <button onClick={() => selectAudio(name)}>{name}</button>;
+const ButtonComponent = ({ name, selectAudio }) => {
+  return (
+    <Button
+      variant="contained"
+      color="primary"
+      onClick={() => selectAudio(name)}
+    >
+      {name}
+    </Button>
+  );
 };
 
-export default Button;
+export default ButtonComponent;
